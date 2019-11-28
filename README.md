@@ -23,6 +23,9 @@ The code is mainly divided in three sections:
   
 2. **Stagger**: In this section first a *Stagger concept* dataset is built. Later on DWM is implemented by using the previous functions using as data the Stagger concept dataset. The algorithm is run one time and ten tiumes to compute the evolution of the average of accuracy and number of learners.
 
+![logo](https://github.com/alexgg278/DWM/blob/master/stagger_acc.PNG)
+![alt text](https://github.com/alexgg278/DWM/stagger_acc.PNG)
+
 3. **SEA**: In this section a dataset of *SEA concepts* is built and later on the DWM is trained with that dataset. Here several variants are performed, such as limiting the maximum number of learners to 5 or updating the learners every ***p*** time steps.
 
 
