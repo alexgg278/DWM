@@ -15,8 +15,8 @@ The project is very simple to be deployed. It consist of a single notebook. The 
 The code is mainly divided in three sections:
 
 1. **Functions**: This section includes all the functions necessary to execute the complete algorithm. This functions are:
-  1. *norm_weights*
-  2. *remove_experts*
+  1.1. *norm_weights*
+  1.2 *remove_experts*
   3. *avg_acc*
   4. *replace_experts*
   5. *plot_performance*
