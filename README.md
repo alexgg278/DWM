@@ -2,7 +2,7 @@
 
 This repository contains the necessary files to run the Dynamic Weighted Majority algorithm (DWM). The DWM algorithm copes with the problem of concept drift in the domain of Data Streaming. Concept drift is characterized by a changing of the labels of the data throughout the time. This phenomena makes very difficult to traditional machine learning algorithms to learn from this evolving data.
 
-In a glimps DYnamic Weight Majority implemets an ensemble classifier of online learners, such as Naive Bayes. The online learners predict the new upcoming sample from the stream and reduce their weight depending in the correctness of the rpediction. If the overal prediction is incorrect a new learner is added to the ensemble. On the pther hand, if the weight of one learner is lower than a threshold, the learner is dropped from the ensemble.
+In a glimps Dynamic Weight Majority implemets an ensemble classifier of online learners, such as Naive Bayes. The online learners predict the new upcoming sample from the stream and reduce their weight depending in the correctness of the rpediction. If the overal prediction is incorrect a new learner is added to the ensemble. On the pther hand, if the weight of one learner is lower than a threshold, the learner is dropped from the ensemble.
 
 More information in the original paper: https://ieeexplore.ieee.org/document/1250911
 
@@ -15,7 +15,7 @@ The project is very simple to be deployed. It consist of a single notebook. The 
 The code is mainly divided in three sections:
 
 1. **Functions**: This section includes all the functions necessary to execute the complete algorithm. This functions are:
-  1.1. *norm_weights*
+  1. *norm_weights*
   1.2 *remove_experts*
   3. *avg_acc*
   4. *replace_experts*
