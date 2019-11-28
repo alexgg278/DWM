@@ -15,11 +15,11 @@ The project is very simple to be deployed. It consist of a single notebook. The 
 The code is mainly divided in three sections:
 
 1. **Functions**: This section includes all the functions necessary to execute the complete algorithm. This functions are:
-  1. *norm_weights*
-  1.2 *remove_experts*
-  3. *avg_acc*
-  4. *replace_experts*
-  5. *plot_performance*
+    1. *norm_weights*
+    2. *remove_experts*
+    3. *avg_acc*
+    4. *replace_experts*
+    5. *plot_performance*
   
 2. **Stagger**: In this section first a *Stagger concept* dataset is built. Later on DWM is implemented by using the previous functions using as data the Stagger concept dataset. The algorithm is run one time and ten tiumes to compute the evolution of the average of accuracy and number of learners.
 
