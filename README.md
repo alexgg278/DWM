@@ -1,88 +1,52 @@
-# Project Title
+# Dynamic Weighted Majority by Alejandro González
 
-One Paragraph of project description goes here
+This repository contains the necessary files to run the Dynamic Weighted Majority algorithm (DWM). The DWM algorithm copes with the problem of concept drift in the domain of Data Streaming. Concept drift is characterized by a changing of the labels of the data throughout the time. This phenomena makes very difficult to traditional machine learning algorithms to learn from this evolving data.
+
+In a glimps DYnamic Weight Majority implemets an ensemble classifier of online learners, such as Naive Bayes. The online learners predict the new upcoming sample from the stream and reduce their weight depending in the correctness of the rpediction. If the overal prediction is incorrect a new learner is added to the ensemble. On the pther hand, if the weight of one learner is lower than a threshold, the learner is dropped from the ensemble.
+
+More information in the original paper: https://ieeexplore.ieee.org/document/1250911
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+The project is very simple to be deployed. It consist of a single notebook. The notebook can be run in a python environment and all the cells executed. All the functions and sketches of code are commented and the Input and Output are stated. The structure of the code is as follows.
+
+The code is mainly divided in three sections:
+
+1. **Functions**: This section includes all the functions necessary to execute the complete algorithm. This functions are:
+  1. *norm_weights*
+  2. *remove_experts*
+  3. *avg_acc*
+  4. *replace_experts*
+  5. *plot_performance*
+  
+2. **Stagger**: In this section first a *Stagger concept* dataset is built. Later on DWM is implemented by using the previous functions using as data the Stagger concept dataset. The algorithm is run one time and ten tiumes to compute the evolution of the average of accuracy and number of learners.
+
+3. **SEA**: In this section a dataset of *SEA concepts* is built and later on the DWM is trained with that dataset. Here several variants are performed, such as limiting the maximum number of learners to 5 or updating the learners every ***p*** time steps.
+
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+In order to run the notebook it is necessary to have python or a python environment installed with the following libraries:
 
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
+* sklearn
+* pandas
+* numpy
+* matplotlib
+* tqdm
+* warnings
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+For each of the Datasets *STAGGER concepts* and *SEA concepts* a test is performed. The test can be run in a lopp of k times in order to compute accuracy averages
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Alejandro González**
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+This project has been developed for the master course Data Streaming.
 
